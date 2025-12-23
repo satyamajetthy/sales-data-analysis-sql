@@ -1,4 +1,4 @@
-# 📌 Project Overview
+# Project Overview
 
 This project focuses on analyzing a sales store dataset using SQL to uncover meaningful business insights.
 The analysis helps understand sales performance, customer behavior, product trends, cancellations, and revenue patterns.
@@ -31,7 +31,7 @@ The project simulates a real-world retail analytics scenario, making it suitable
 - Identify peak purchase times
 - Provide data-driven business insights 
 
-##  🧠 Key Insights Summary
+##  Key Insights Summary
 
 - A small set of products drives a large share of total revenue, highlighting high-value items.
 - Certain product categories consistently outperform others, guiding inventory and marketing focus.
@@ -42,7 +42,7 @@ The project simulates a real-world retail analytics scenario, making it suitable
 - Digital payments are preferred over cash, showing a convenience trend.
 - A small group of customers contributes disproportionately to sales, emphasizing high-value customer retention.
 
-## 🛠️ Tools & Skills Used
+##  Tools & Skills Used
 
 - SQL (Joins, Aggregations, CTEs, Window Functions)
 - Data cleaning
