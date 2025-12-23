@@ -4,7 +4,7 @@ This project focuses on analyzing a sales store dataset using SQL to uncover mea
 The analysis helps understand sales performance, customer behavior, product trends, cancellations, and revenue patterns.
 The project simulates a real-world retail analytics scenario, making it suitable for SQL interviews and portfolio presentation.
 
-## 🗂️ Dataset Description
+## Dataset Description
 | Column Name      | Description                            |
 | ---------------- | -------------------------------------- |
 | transaction_id   | Unique identifier for each transaction |
