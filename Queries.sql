@@ -19,7 +19,7 @@ SELECT *
 FROM sales;
 
 ---DATA CLEANING
----To check for duplication and removal of duplicate records
+-----To check for duplication and removal of duplicate records 
 
 WITH cte AS (
     SELECT *,
@@ -32,11 +32,11 @@ WITH cte AS (
 DELETE FROM cte
 WHERE rn > 1;
 
----removal of NULL values
+-----removal of NULL values
 DELETE FROM sales
 WHERE Transaction_id IS NULL ;
 
----consistent formatting 
+-----consistent formatting 
 update sales
 set gender='M'
 where gender='Male';
@@ -45,10 +45,9 @@ update sales
 set gender='F'
 where gender='Female';
 
----DATA ANALYSIS
+---DATA ANALYSIS 
 
---What are the top 5 most selling products by quantity ?
-
+---What are the top 5 most selling products by quantity ?
 SELECT 
     product_name,
     SUM(quantity) AS total_quantity_sold
@@ -59,7 +58,6 @@ ORDER BY total_quantity_sold DESC
 LIMIT 5;
 
 ---Which products are most frequently cancelled ?
-
 SELECT 
     product_name,
     COUNT(*) AS cancelled_count
@@ -82,23 +80,20 @@ SELECT
     END AS time_of_day
 FROM sales;
 
---who are the top 5 hightest spending customer?
-
+---Who are the top 5 hightest spending customer?
 SELECT customer_name,sum(quantiy*prce)as spending
 from sales
 group by customer_name
 order by spending desc
 limit 5;
 
----Which product categories generate the highets revenue?
-
+---Which product categories generate the highest revenue?
 SELECT product_category,sum(quantiy*prce)as revenue
 from sales
 group by product_category
 order by revenue desc;
 
 ---What is the most preferred paymet mode?
-
 SELECT payment_mode,count(*)as total_count
 from sales
 group by payment_mode
@@ -116,7 +111,7 @@ GROUP BY gender, product_category
 ORDER BY gender, purchase_count DESC;
 
 
-----How does payment mode affect total revenue?
+---How does payment mode affect total revenue?
 SELECT 
     payment_mode,
     SUM(price * quantity) AS total_revenue
@@ -126,7 +121,6 @@ GROUP BY payment_mode
 ORDER BY total_revenue DESC;
 
 ---Which products generate the highest revenue?
-
 SELECT 
     product_name,
     SUM(price * quantity) AS total_revenue
